@@ -8,10 +8,8 @@ from huaweicloudsdkvpc.v2 import *
 if __name__ == "__main__":
     # The AK and SK used for authentication are hard-coded or stored in plaintext, which has great security risks. It is recommended that the AK and SK be stored in ciphertext in configuration files or environment variables and decrypted during use to ensure security.
     # In this example, AK and SK are stored in environment variables for authentication. Before running this example, set environment variables CLOUD_SDK_AK and CLOUD_SDK_SK in the local environment
-    # ak = __import__('os').getenv("CLOUD_SDK_AK")
-    # sk = __import__('os').getenv("CLOUD_SDK_SK")
-    ak = 'RKF6SNZMEAGEZCFGQ5HD'
-    sk = 'keutBUXLAksv3TrudUHArOU2sQS4YWnqI6kNpZ6J'
+    ak = __import__('os').getenv("CLOUD_SDK_AK")
+    sk = __import__('os').getenv("CLOUD_SDK_SK")
 
     credentials = BasicCredentials(ak, sk) \
 
