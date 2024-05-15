@@ -1,0 +1,6 @@
+User Wang, Fei has accessed the system successfully.User Fisher, Wang has accessed the system successfully.User Wang, Fei has accessed the system successfully.
+User Fisher, Wang has accessed the system successfully.
+User Jim, Green has accessed the system successfully.
+User Kate, Green has accessed the system successfully.
+The reason why Jim loves programing is: "It makes me busy."
+The reason why Kate loves programing is: "I can draw nice pictures by programing."

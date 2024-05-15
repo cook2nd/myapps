@@ -1,0 +1,43 @@
+func_scopes:
+- environments:
+  - environment: test
+    environment_short: test
+    modules:
+    - code_revision: null
+      module_conf: w-101-cce-conf
+      module_location: ssh://git@devstack.vgc.com.cn:7999/clz/w-101-cce-hw.git
+      module_name: cce
+    - code_revision: null
+      module_conf: w-105-prometheus-grafana-conf
+      module_location: ssh://git@devstack.vgc.com.cn:7999/clz/w-105-prometheus-grafana-hw.git
+      module_name: prometheus-grafana
+    - build_flag: false
+      code_revision: null
+      module_branch: master
+      module_conf: c-002-plumber
+      module_location: ssh://git@devstack.vgc.com.cn:7999/clz/w-100-master-hw.git
+      module_name: initplumber
+      module_source: ssh://git@devstack.vgc.com.cn:7999/clz/c-002-plumber-hw.git
+    - code_revision: null
+      module_conf: w-107-efk-conf
+      module_location: ssh://git@devstack.vgc.com.cn:7999/clz/w-107-efk-hw.git
+      module_name: efk
+  func_scope: corebe
+  func_scope_short: crb
+  org_scope: dp
+- environments:
+  - environment: test
+    environment_short: test
+    modules:
+    - code_revision: null
+      module_conf: w-102-outbound-conf
+      module_location: ssh://git@devstack.vgc.com.cn:7999/clz/w-102-outbound-hw.git
+      module_name: outbound
+    - code_revision: null
+      module_conf: w-108-mq-conf
+      module_location: ssh://git@devstack.vgc.com.cn:7999/clz/w-108-mq-hw.git
+      module_name: mq
+  func_scope: sharedservices
+  func_scope_short: shs
+  org_scope: dp
+key: updated value 3
