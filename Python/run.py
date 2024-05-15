@@ -22,7 +22,7 @@ data = read_yaml(yaml_file_path)
 print(data)
  
 # 修改YAML数据
-data['key'] = 'updated value 3'
+data['key'] = 'updated value 999'
  
 # 写入修改后的YAML数据到文件
 write_yaml(yaml_file_path, data)
