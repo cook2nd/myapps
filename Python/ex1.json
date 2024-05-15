@@ -1,0 +1,37 @@
+[
+  {
+    "data": {
+      "id": "ed",
+      "label": "Executive Director (Harriet)"
+    },
+    "classes": "purple"
+  },
+  {
+    "data": {
+      "id": "vp1",
+      "label": "Vice President (Sarah)"
+    },
+    "classes": "square"
+  },
+  {
+    "data": {
+      "id": "vp2",
+      "label": "Vice President (Charlotte)"
+    },
+    "classes": "square"
+  },
+  {
+    "data": {
+      "id": "po1",
+      "label": "Program Officer (Sojourner)"
+    },
+    "classes": "green diamond"
+  },
+  {
+    "data": {
+      "id": "pa",
+      "label": "Program Associate (Ellen)"
+    },
+    "classes": "myimage"
+  }
+]

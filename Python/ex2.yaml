@@ -1,0 +1,8 @@
+---
+router1: 10.1.1.1
+router2: 10.1.1.2
+switch1: 10.10.10.50
+switch2:
+  name: switch2.local.domain
+  ip: 10.10.10.60
+  model: FortiGate 1500d

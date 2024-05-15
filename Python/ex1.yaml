@@ -1,0 +1,125 @@
+spec:
+  rds:
+    PAAS_TYPE: rds
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - RDS_NAME: rds-rtm-db-dvc-dev-01
+      RDS_KMSNAME: KMS-Vault
+      RDS_TYPE: MySQL
+      RDS_VER: 5.7
+      RDS_FLAVOR: rds.mysql.n1.large.2.ha
+      RDS_DISKSIZE: 40
+      RDS_DISKTYPE: CLOUDSSD
+      RDS_HA_REPLICATION_MODE: semisync
+      RDS_SUBNET: sbn-rtm-dvc-db-dev
+      RDS_VPC: vpc-rtm-device-dev
+      RDS_SGR: secgrp-rtm-rds-dvc-dev-01
+  dcs:
+    PAAS_TYPE: dcs
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - DCS_NAME: dcs-rtm-db-dvc-dev-01
+      DCS_CAPACITY_SIZE: 4
+      DCS_PRODUCT_ID: redis.cluster.xu1.large.r2.4
+      DCS_SUBNET: sbn-rtm-dvc-db-dev
+      DCS_VPC: vpc-rtm-device-dev
+      DCS_AZ: cn-north-4b
+  mrs:
+    PAAS_TYPE: mrs
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - MRS_NAME: mrs-rtm-db-dvc-dev-01
+      MRS_TASK_NODE_CREATE: false
+      MRS_MASTER_SIZE: c6.2xlarge.4.linux.bigdata
+      MRS_NODE_SIZE: c6.2xlarge.4.linux.bigdata
+      MRS_TASK_NODE_SIZE: c6.2xlarge.4.linux.bigdata
+      MRS_MASTER_NUM: 2
+      MRS_NODE_NUM: 3
+      MRS_TASK_NODE_NUM: 3
+      MRS_VOL_MASTER_SIZE: 600
+      MRS_VOL_NODE_SIZE: 600
+      MRS_VOL_TASK_SIZE: 600
+      MRS_NODE_VOLUME_COUNT: 1
+      MRS_VER: MRS 3.0.5
+      MRS_SAFE_MODE: true
+      MRS_SUBNET: sbn-rtm-dvc-db-dev
+      MRS_VPC: vpc-rtm-device-dev
+      MRS_SGR: secgrp-rtm-mrs-dvc-dev-01
+      MRS_COMPONENT: '"Storm", "Kafka"'
+  dds:
+    PAAS_TYPE: dds
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - DDS_NAME: dds-rtm-db-dvc-dev-01
+      DDS_VER: 4.4
+      DDS_STORAGE_ENGINE: rocksDB
+      DDS_KMSNAME: KMS-Vault
+      DDS_STSIZE: 20
+      DDS_SPEC: dds.mongodb.s6.xlarge.2
+      DDS_SUBNET: sbn-rtm-dvc-db-dev
+      DDS_VPC: vpc-rtm-device-dev
+      DDS_SGR: secgrp-rtm-dds-dvc-dev-01
+  obs:
+    PAAS_TYPE: obs
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - OBS_NAME: obs-rtm-rvsfile-source-dev
+    - OBS_NAME: obs-rtm-tboxuploadlog-dev
+    - OBS_NAME: obs-rtm-download-file-dev
+    - OBS_NAME: obs-rtm-ota-files-dev
+    - OBS_NAME: rtm-hbase-migration-obs-dev
+  dms:
+    PAAS_TYPE: dms
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - DMS_NAME: dms-rtm-db-dvc-dev-01
+      DMS_MANAGER_USER: rtmmanager
+      DMS_ACCESS_USER: rtmuser
+      DMS_VER: 2.7
+      DMS_INSTANCE_TYPE: cluster
+      DMS_ENGINE: kafka
+      DMS_BANDWIDTH: 100MB
+      DMS_PARTITION_NUM: 300
+      DMS_SUBNET: sbn-rtm-dvc-db-dev
+      DMS_VPC: vpc-rtm-device-dev
+      DMS_SGR: secgrp-rtm-dms-dvc-dev-01
+  css:
+    PAAS_TYPE: css
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - CSS_NAME: css-rtm-db-dvc-dev-01
+      CSS_VOL_SIZE: 40
+      CSS_NODE_NUM: 3
+      CSS_FLAVOR: ess.spec-4u8g
+      CSS_MASTER_NODE_CREATE: false
+      CSS_MASTER_NODE_NUM: 3
+      CSS_MASTER_VOL_SIZE: 40
+      CSS_MASTER_FLAVOR: ess.spec-4u8g
+      CSS_CLIENT_NODE_CREATE: false
+      CSS_CLIENT_NODE_NUM: 3
+      CSS_CLIENT_VOL_SIZE: 40
+      CSS_CLIENT_FLAVOR: ess.spec-4u8g
+      CSS_ENGINE_VER: 7.9.3
+      CSS_SUBNET: sbn-rtm-dvc-db-dev
+      CSS_VPC: vpc-rtm-device-dev
+      CSS_SGR: secgrp-rtm-css-dvc-dev-01
+  cdm:
+    PAAS_TYPE: cdm
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - CDM_NAME: cdm-rtm-dvc-dev-01
+      CDM_FLAVORID: 5ddb1071-c5d7-40e0-a874-8a032e81a697
+      CDM_VER: 2.9.1.200
+      CDM_AZ: cn-north-4a
+      CDM_SUBNET: sbn-rtm-dvc-db-dev
+      CDM_VPC: vpc-rtm-device-dev
+      CDM_SGR: secgrp-rtm-cdm-dvc-dev-01
+  cloudtable:
+    PAAS_TYPE: cloudtable
+    EPID: 54cc2895-a045-4199-bb92-f8166a6b117b
+    DETAILS:
+    - CLOUDTABLE_NAME: cloudtable-rtm-dvc-dev-01
+      CLOUDTABLE_VPC: vpc-rtm-device-dev
+      CLOUDTABLE_SUBNET: sbn-rtm-dvc-db-dev
+      CLOUDTABLE_SGR: secgrp-rtm-hbase-dvc-dev-01
+      CLOUDTABLE_HBASE_VER: 2.4.14
