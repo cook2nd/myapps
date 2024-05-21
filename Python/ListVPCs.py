@@ -1,4 +1,8 @@
 # coding: utf-8
+
+import os
+os.system('pip install --root-user-action=ignore huaweicloudsdkcore huaweicloudsdkvpc')
+
 import json
 import re
 from huaweicloudsdkcore.auth.credentials import BasicCredentials
@@ -38,6 +42,7 @@ if __name__ == "__main__":
                 route = vpc.get('routes')
                 # print(type(route))
                 print(route[0].get('nexthop'))
+        print("#############")
     except exceptions.ClientRequestException as e:
         print(e.status_code)
         print(e.request_id)
