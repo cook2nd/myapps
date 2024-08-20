@@ -1,0 +1,1 @@
+python.exe c:/Users/a200197817/myapps/bin/ftq.py on

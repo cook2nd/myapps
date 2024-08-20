@@ -11,8 +11,8 @@ if len(sys.argv) < 2:
 os.environ["DISPLAY"] = ":0"
 
 subprocess.Popen('C:\\Users\\a200197817\\Apps\\Xunlian\\fotiaoqiang.exe')
-
-time.sleep( 5 )
+if sys.argv[1] == "on":
+    time.sleep( 5 )
 
 print("Mouse Position:")
 mousePoint = pyautogui.position()
@@ -27,18 +27,19 @@ listMenuCenter = list(menuCenter)
 listConnectPosition = [0, 0]
 listConnectPosition[0] = listMenuCenter[0] + 53
 listConnectPosition[1] = listMenuCenter[1]
-pyautogui.click(x=listConnectPosition[0], y=listConnectPosition[1], clicks=1, interval=2, button="LEFT", duration=1)
+pyautogui.click(x=listConnectPosition[0], y=listConnectPosition[1], clicks=1, interval=1, button="LEFT", duration=1)
 
 if sys.argv[1] == "on":
     listConnectPosition[0] = listMenuCenter[0] + 156
     listConnectPosition[1] = listMenuCenter[1] + 510
-    os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v AutoConfigURL /t REG_SZ /d "http://proxy-cn.t-systems.com/proxy.pac" /f')
-    os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 0 /f')
 elif sys.argv[1] == "off":
     listConnectPosition[0] = listMenuCenter[0] + 156
     listConnectPosition[1] = listMenuCenter[1] + 359
 
 print(listConnectPosition)
-pyautogui.click(x=listConnectPosition[0], y=listConnectPosition[1], clicks=1, interval=2, button="LEFT", duration=2)
+pyautogui.click(x=listConnectPosition[0], y=listConnectPosition[1], clicks=1, interval=1, button="LEFT", duration=1)
 
+if sys.argv[1] == "on":
+    os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v AutoConfigURL /t REG_SZ /d "http://proxy-cn.t-systems.com/proxy.pac" /f')
+    os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 0 /f')
 
