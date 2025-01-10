@@ -11,19 +11,19 @@ if __name__ == "__main__":
     # In this example, AK and SK are stored in environment variables for authentication. Before running this example, set environment variables CLOUD_SDK_AK and CLOUD_SDK_SK in the local environment
     # ak = os.environ["CLOUD_SDK_AK"]
     # sk = os.environ["CLOUD_SDK_SK"]
-    ak = "NNFHWFR8ZEO6WVW8305R"
-    sk = "onYcaMeGoVYrkQwtNADV1fJIA1Zpk6PWLJFGx103"
+    ak = "4QHEZNXTW8IKK3OV6YMX"
+    sk = "pT5J6mJ6ggOWks7wi6p7DaSpbXh6WYNsvooitfdc"
 
     credentials = BasicCredentials(ak, sk)
 
     client = DdsClient.new_builder() \
         .with_credentials(credentials) \
-        .with_region(DdsRegion.value_of("cn-north-1")) \
+        .with_region(DdsRegion.value_of("cn-north-4")) \
         .build()
 
     try:
         request = ListAz2MigrateRequest()
-        request.instance_id = "cd571954015947d8b346809a5ff22b80in02"
+        request.instance_id = "e055d5a6305a4c4eac1dee3003d809a2in02"
         response = client.list_az2_migrate(request)
         print(response)
     except exceptions.ClientRequestException as e:
